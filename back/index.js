@@ -2,10 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const itemsRouter = require("./routers/itemsRouter");
 const dotenv = require("dotenv");
-
-const port = 5000;
+const orderRouter = require("./routers/oredRouter");
+var cors = require("cors");
+const PORT = 5000;
 
 const app = express();
+app.use(cors());
 
 dotenv.config();
 app.use(express.json());
@@ -22,7 +24,8 @@ mongoose.connect(
 );
 
 app.use("/api/item", itemsRouter);
+app.use("/api/order", orderRouter);
 
-app.listen(port, () => {
-  console.log(`app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`app listening at http://localhost:${PORT}`);
 });

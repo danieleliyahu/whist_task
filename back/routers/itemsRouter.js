@@ -32,6 +32,7 @@ itemsRouter.put("/edit/:id", async (req, res) => {
   item.description = req.body.description || item.description;
   item.image = req.body.image || item.image;
   const updateItem = await item.save();
+  console.log(updateItem);
   res.send({ message: "item updated", item: updateItem });
 });
 itemsRouter.delete("/delete/:id", async (req, res) => {
