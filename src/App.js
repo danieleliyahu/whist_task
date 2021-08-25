@@ -18,7 +18,7 @@ function App() {
   }
   async function buy() {
     await axios
-      .post("/api/order/buy", cart)
+      .post("http://localhost:5000/api/order/buy", cart)
       .then(() => {
         setCart([]);
       })

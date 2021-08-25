@@ -81,7 +81,13 @@ orderRouter.get("/stats", async (req, res) => {
     { $sort: { _id: -1 } },
   ]);
   past5Days = past5Days.map((day, i) => {
-    if (past5DaysCheck[i] == day._id) {
+    if (
+      past5DaysCheck[0] == day._id ||
+      past5DaysCheck[1] == day._id ||
+      past5DaysCheck[2] == day._id ||
+      past5DaysCheck[3] == day._id ||
+      past5DaysCheck[4] == day._id
+    ) {
       return day;
     } else {
     }

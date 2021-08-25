@@ -59,7 +59,7 @@ const Admin = (props) => {
             <tr>
               <td>{item.title}</td>
               <td>{item.description}</td>
-              <td>{item.price}</td>
+              <td>{item.price}$</td>
               <td className="smallImgContainer">
                 <img className="img" src={item.image}></img>
               </td>

@@ -33,6 +33,7 @@ const Stats = () => {
           <div>
             <h1>Past 5 days $</h1>
             <div>
+              {console.log(stats)}
               {stats.past5Days.map((day) => {
                 return day ? (
                   <p>

@@ -22,7 +22,7 @@ const Home = (props) => {
               </div>
               <p>{item.title}</p>
               <p>description: {item.description}</p>
-              <p>${item.price}</p>
+              <p>{item.price}$</p>
               <button
                 class="btn btn-primary"
                 type="button"
